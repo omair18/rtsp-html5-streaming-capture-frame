@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>livestream test</title>
+        <meta name="author" content="Ralph Hughes">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    </head>
+    <body>
+
+
+
+    <div id="group" style="position: absolute; left:0px; top:0px; height: 640px; width: 480px">
+        <video id="widget" crossorigin="anonymous" width="640" height="480" muted="muted" controls>
+            <source id="vidSource" type="video/mp4">
+        </video>
+ 
+        <div>
+            <button id="capture" href="my-file-name.png" download>Capture</button>
+            <!-- <a href="#" class="button" id="btn-download" download="my-file-name.png">Download</a> -->
+
+          </div>
+        <div>
+            <img id="image" src="" width="640px" height="480px" crossorigin="anonymous">
+        </div>
+        
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+<script>
+	var widgetID = document.getElementById('widget');
+        var camCanvas = document.getElementById("group");
+	var vidSource = document.getElementById("vidSource");
+            
+            widgetID.controls = true;
+            vidSource.src = "http://localhost:3000/cam1";        // live stream
+            widgetID.load();
+            widgetID.play();
+</script>
+</body>
+</html>
