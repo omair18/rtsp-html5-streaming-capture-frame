@@ -18,3 +18,5 @@
 - Run `http-server` to run `index.html` in a server
 
 - Visit `127.0.0.1:8080`
+
+![Sample](https://github.com/omair18/rtsp-html5-streaming-capture-frame/blob/master/screenshot.jpeg)
